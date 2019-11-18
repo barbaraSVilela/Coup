@@ -1,4 +1,4 @@
 package modelo;
 public interface ICard{
-    void action(String type);
+    int action(String type);
 }

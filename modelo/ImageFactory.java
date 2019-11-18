@@ -70,7 +70,7 @@ public class ImageFactory {
         case "imgBck":
             return ("file:./imagens/Back.png");
         default:
-            throw new IllegalArgumentException("Invalid image Id");
+            throw new IllegalArgumentException("Imagem id Invalida");
         }
     }
 
