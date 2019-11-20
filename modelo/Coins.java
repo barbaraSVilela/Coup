@@ -12,4 +12,7 @@ public class Coins{
     public void removeCoins(int i){
         coins-= i;
     }
+    public int getCoins(){
+        return coins;
+    }
 }

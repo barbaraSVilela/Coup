@@ -1,12 +1,14 @@
 package modelo;
 import java.util.*;
+// uma unica carta pode ser assassino,capitao,condessa,duque ou embaixador
 public class Card extends Observable {
-
+    private String cardName;
     private ICard card;
     private boolean faceUp;
 
 public Card(String cardName ){
-    faceUp = true;
+    this.faceUp = true;
+    this.cardName = cardName;
     switch(cardName){
     case "assassino":
         card = new AssassinoCard();
@@ -40,5 +42,8 @@ public Card(String cardName ){
         }
         setChanged();
         notifyObservers();
+    }
+    public int action(){
+        return card.action(cardName);
     }
 }
