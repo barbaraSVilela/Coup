@@ -38,6 +38,7 @@ public class CardDeck extends Observable {
             cards.add(card);
         }
     }
+    
 
     public ArrayList<Card> getCards() {
         return cards;
@@ -74,5 +75,38 @@ public class CardDeck extends Observable {
     public int getNumberOfCoins() {
         return playerCoins.getCoins();
     }
-
+    public boolean searchForCard(String cardName){
+        boolean isFound;
+        isFound = false;
+        for (Card card : cards) {
+            if(card.getCardName() == "cardName"){
+                isFound = true;
+                }
+        
+            }
+            return isFound;
+        }
+    public Card getRandomCard(){
+        Random r = new Random();
+        int n  = r.nextInt(2);
+        Card selected = cards.get(n);
+        return selected;
+    }
+    public Card getChosenCard(String cardName){
+        Card chosen;
+        chosen= null;
+        for(Card card:cards){
+            if(card.getCardName() == cardName){
+                chosen = card;
+            }
+        }
+        return chosen;
+    }
+    public Card getCardByIndex(int i){
+        Card selected = cards.get(i);
+        return selected;
+    }
+    public void actionCard(CardDeck selected, CardDeck second){
+        
+    }
 }

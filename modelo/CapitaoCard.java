@@ -1,13 +1,14 @@
 package modelo;
 
-public class CapitaoCard implements ICard{
+public class CapitaoCard implements ICardType{
 
     public CapitaoCard(){
 
     }
 
-    public int action(String type) {
-        return 2;
+    public void action(CardDeck selectedDeck, CardDeck secondCard){
+        selectedDeck.addCoin(2);
+        secondCard.removeCoin(2);
     }
     
 }   

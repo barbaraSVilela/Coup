@@ -3,7 +3,7 @@ import java.util.*;
 // uma unica carta pode ser assassino,capitao,condessa,duque ou embaixador
 public class Card extends Observable {
     private String cardName;
-    private ICard card;
+    private ICardType card;
     private boolean faceUp;
 
 public Card(String cardName ){
@@ -43,7 +43,12 @@ public Card(String cardName ){
         setChanged();
         notifyObservers();
     }
-    public int action(){
-        return card.action(cardName);
+    public void action(CardDeck selected, CardDeck second){
+       card.action(selected,second);
     }
+
+    public String getCardName() {
+        return cardName;
+    }
+    
 }

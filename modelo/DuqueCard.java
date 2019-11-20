@@ -1,18 +1,11 @@
 package modelo;
-public class DuqueCard implements ICard{
+public class DuqueCard implements ICardType{
     public DuqueCard(){
         
     }
-    public int action(String type) {
-        if (type == "moedas"){
-            return 2;
-        }
-        else
-         return 0;
-
+    public void action(CardDeck selectedDeck,CardDeck secondDeck) {
+        selectedDeck.addCoin(3);
     }
-
-
 
     
 }
