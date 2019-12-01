@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - CoupMain",
+            "request": "launch",
+            "mainClass": "modelo.CoupMain",
+            "projectName": "Coup_30078ae0"
+        }
+    ]
+}

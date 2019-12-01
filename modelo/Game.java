@@ -1,4 +1,4 @@
-package modelo;
+/*package modelo;
 
 import java.util.*;
 
@@ -6,12 +6,15 @@ public class Game extends Observable {
     private static Game game = new Game();
     private CardDeck deckP1, deckP2;
     private int player;
-    private Coins bank;
-
-    public Game() {
-        bank.addCoins(100);
+    
+    private Game(){
         deckP1 = new CardDeck();
         deckP2 = new CardDeck();
+        player = 1;
+    }
+    public Game(CardDeck deckP1,CardDeck deckP2) {
+        this.deckP1 = deckP1;
+        this.deckP2 = deckP2;
         player = 1;
     }
 
@@ -31,49 +34,13 @@ public class Game extends Observable {
     }
 
     public void play(CardDeck selectedDeck, String action) {
-        if (player == 3) {
-            return;
+            if(selectedDeck == deckP1){
+                deckP1.play(deckP1, deckP2, action);
+            }
+            else if(selectedDeck == deckP2){
+                deckP2.play(deckP2, deckP1, action);
+            }
+
         }
 
-        if (selectedDeck == deckP1) {
-        }
-    }
-
-    private void playerAction(CardDeck selectedDeck, String action,CardDeck secondDeck) {
-        switch (action) {
-            case "renda":
-                selectedDeck.addCoin(1);
-                bank.removeCoins(1);
-                nextPlayer();
-                break;
-            case "ajuda":
-                selectedDeck.addCoin(2);
-                bank.removeCoins(2);
-                nextPlayer();
-                break;
-            case "golpe":
-                selectedDeck.removeCoin(7);
-                bank.addCoins(7);
-                secondDeck.setCardSelected(secondDeck.getRandomCard());
-                secondDeck.removeSelectedCard();
-                break;
-            case "assassino":
-                selectedDeck
-                
-                break;
-            case "capitao":
-
-          case "duque":                
-    }
-}
-    
-
-    public void addCoinBank(int i) {
-
-        bank.addCoins(i);
-    }
-
-    public void removeCoinBank(int i) {
-        bank.removeCoins(i);
-    }
-}
+}*/
