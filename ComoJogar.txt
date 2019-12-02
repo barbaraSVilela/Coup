@@ -1,0 +1,15 @@
+Coup
+(Jogo de blefe)
+Objetivo: eliminar as cartas do outro jogador
+
+
+O jogador pode realizar certas ações para chegar no objetivo:
+
+    AJUDA: Ganha 2 moedas 
+    RENDA: Ganha 1 moeda
+    GOLPE: Paga 7 moedas e elimina uma carta aleatoria do outro jogador
+    ASSASSINO: Paga 3 moedas e elimina uma carta aleatoria do outro jogador
+    DUQUE: Ganha 3 moedas
+    EMBAIXADOR: Troca as cartas da mão 
+    CAPITAO: Rouba 2 moedas do outro jogador
+    CONDESSA:Remove 3 moedas do outro jogador

@@ -9,7 +9,9 @@ public CondessaCard() {
 
     @Override
     public void action(Hand selectedDeck, Hand secondDeck) {
+        if(secondDeck.getNumberOfCoins() >= 3){
         secondDeck.removeCoin(3);
+    }
     }
 
     @Override
