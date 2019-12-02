@@ -13,4 +13,9 @@ public class EmbaixadorCard extends Card {
         selectedDeck.getNewHand();
     }
 
+    @Override
+    public String getImageName() {
+        return "embaixador";
+    }
+
 }

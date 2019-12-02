@@ -12,4 +12,9 @@ public class DuqueCard extends Card {
         selectedDeck.addCoin(3);
     }
 
+    @Override
+    public String getImageName() {
+        return "duque";
+    }
+
 }

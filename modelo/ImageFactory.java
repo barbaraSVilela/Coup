@@ -17,15 +17,15 @@ public class ImageFactory {
 
     private String id2File(String imgId) {
         switch (imgId) {
-        case "img1":
+        case "assassino":
             return ("file:./imagens/Assassino.png");
-        case "img2":
+        case "embaixador":
             return ("file:./imagens/Embaixador.png");
-        case "img3":
-            return ("file:./imagens/Capitao.jpg");
-        case "img4":
-            return ("file:./imagens/Condessa.jpg");
-        case "img5":
+        case "capitao":
+            return ("file:./imagens/Capitao.png");
+        case "condessa":
+            return ("file:./imagens/Condessa.png");
+        case "duque":
             return ("file:./imagens/Duque.jpg");
         case "imgBck":
             return ("file:./imagens/Back.png");
@@ -37,7 +37,7 @@ public class ImageFactory {
     public ImageView createImage(String imgId) {
         Image img = images.get(imgId);
         if (img == null) {
-            img = new Image(id2File(imgId));
+            img = new Image(id2File(imgId),305, 305, true, true);
             images.put(imgId, img);
         }
 

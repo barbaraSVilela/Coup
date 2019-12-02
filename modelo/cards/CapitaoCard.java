@@ -13,5 +13,10 @@ public class CapitaoCard extends Card {
         selectedDeck.addCoin(2);
         secondDeck.removeCoin(2);
     }
+
+    @Override
+    public String getImageName() {
+        return "capitao";
+    }
     
 }   

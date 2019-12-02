@@ -10,8 +10,15 @@ public class AssassinoCard extends Card {
 
     @Override
     public void action(Hand selectedDeck, Hand secondDeck) {
-        selectedDeck.removeCoin(3);
-        secondDeck.removeRandomCard();
+        if(selectedDeck.getNumberOfCoins() >= 3){
+            selectedDeck.removeCoin(3);
+            secondDeck.removeRandomCard();
+        }
+    }
+
+    @Override
+    public String getImageName() {
+        return "assassino";
     }
 
 }

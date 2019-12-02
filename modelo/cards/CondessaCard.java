@@ -11,5 +11,10 @@ public CondessaCard() {
     public void action(Hand selectedDeck, Hand secondDeck) {
         secondDeck.removeCoin(3);
     }
+
+    @Override
+    public String getImageName() {
+        return "condessa";
+    }
    
 }
